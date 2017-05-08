@@ -14,12 +14,6 @@ tags:
 #
 # Styling
 #
-image:
-  header: ""
-  thumb: ""
-  homepage: ""
-  caption: ""
-  url: ""
 ---
 
 
