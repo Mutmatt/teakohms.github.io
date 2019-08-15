@@ -1,11 +1,16 @@
 {% if page.header == NULL and page.header.image_fullwidth == NULL and page.header.pattern == NULL and page.header.background-color == NULL and page.header.title == NULL %}
 
 <div id="masthead-no-image-header">
-	<div class="row">
+	<div class="row fill-and-center-items">
 		<div class="small-12 columns">
+			{% if site.logo %}
 			<a id="logo" href="{{ '/' | absolute_url }}" title="{{ site.title }} – {{ site.slogan }}">
 				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
 			</a>
+			{% else %}
+			<h1>{{site.title}}</h1>
+			<h3>{{site.slogan}}</h3>
+			{% endif %}
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -49,11 +54,16 @@
 {% elsif page.header.image_fullwidth %}
 
 <div id="masthead">
-	<div class="row">
+	<div class="row fill-and-center-items">
 		<div class="small-12 columns">
-			<a id="logo" href="{{ '/' | absolute_url }}" title="{{ site.title }} – {{ site.slogan }}">
-				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
-			</a>
+			{% if site.logo %}
+				<a id="logo" href="{{ '/' | absolute_url }}" title="{{ site.title }} – {{ site.slogan }}">
+					<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
+				</a>
+			{% else %}
+				<h1 class="logo-alt">{{site.title}}</h1>
+				<h3 class="logo-alt">{{site.slogan}}</h3>
+			{% endif %}
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->

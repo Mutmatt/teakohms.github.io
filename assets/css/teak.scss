@@ -1,0 +1,17 @@
+---
+sitemap:
+  exclude: true
+---
+@import "01_settings_colors.scss";
+
+.logo-alt {
+  color: $grey-1;
+  margin:0;
+}
+
+.fill-and-center-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
